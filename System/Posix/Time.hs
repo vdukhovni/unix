@@ -1,3 +1,4 @@
+{-# LANGUAGE CPP #-}
 {-# LANGUAGE CApiFFI #-}
 {-# LANGUAGE Safe #-}
 -----------------------------------------------------------------------------
@@ -18,7 +19,7 @@ module System.Posix.Time (
 
       epochTime
 
-    #ifdef HAVE_SETITIMER
+#ifdef HAVE_SETITIMER
     , ITimerType(..)
 
     , TimeVal(TimeVal)
@@ -31,7 +32,7 @@ module System.Posix.Time (
 
     , setitimer
     , getitimer
-    #endif
+#endif
 
   ) where
 
